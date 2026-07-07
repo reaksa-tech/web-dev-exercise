@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add k-drama</title>
+    <link rel="stylesheet" href="./my_favorite_form.css">
+</head>
+<body>
+    <!-- js file -->
+    <script src="my_favorite_form.js"></script>
+
+
+    <h1>Add A new k-drama</h1>
+
+    <form action="#" id="kdramaForm" method="post" class="card" novalidate>
+
+        <div class="form-row">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required 
+            placeholder="e.g. Gaurdian">
+            <span id="titleError" class="error"></span>
+
+            <small class="hint">Enter the official or widely known english title</small>
+        </div>
+
+        <div class="date">
+            <label for="date">Start Date</label>
+            <input type="date" id="date" name="date">
+            <span id="dateError" class="error"></span>
+        </div>
+
+
+        <div class="form-row">
+            <label for="genre">Genre</label>
+            <select name="genre" id="genre" required>
+                <option value=""selected disabled>Choose genre</option>
+                <option>Action</option>
+                <option>Adventure</option>
+                <option>Romance</option>
+                <option>Comedy</option>
+                <option>Mystery</option>
+                <option>Detected</option>
+            </select>    <!-- select use to select opt -->
+            <span id="genreError" class="error"></span>
+           
+        </div>
+
+        <fieldset class="form-row">
+            <legend>Type</legend>
+            <div class="radios">
+                <label> <input type="radio" name="type" value="TV">TV</label>
+                <label> <input type="radio" name="type" value="film">Film</label>
+                <label> <input type="radio" name="type" value="ona">ONA</label>
+            </div>
+            <span id="typeError" class="error"></span>
+            
+        </fieldset>
+
+        <div class="quantity">
+            <label for="quantity">Rating</label>
+            <input type="number" id="quantity" name="quantity" min="10" max="100" step="10">
+            <span id="quantityError" class="error"></span>
+        </div>
+
+        <div class="form-row">
+            <label for="summary">Summary</label>
+            <textarea id="summary" name="summary" rows="5" 
+            placeholder="1-3 sentences about the story..." required></textarea>
+            <small class="hint">Keep it Concise(max 300 characters).</small>
+            <span id="summaryError" class="error"></span>
+        </div>
+        
+
+        <div class="actions">
+            <button type="submit">Save</button>
+            <button class="secondary" type="reset">Clear</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
